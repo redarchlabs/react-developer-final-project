@@ -1,0 +1,51 @@
+section.testimonials{
+    width:100%;
+}
+
+section.testimonials .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto;      /* 2 rows */
+    align-items: center;             /* Vertically center the content */
+    justify-items: center;           /* Horizontally center the content */
+    padding-top: 10px;
+    position: relative;              
+    border-radius: 20px;             /* Optional: rounded corners on the entire grid */
+}
+
+section.testimonials .grid-container button{
+    justify-self: end;
+    margin-left:30px;
+
+}
+
+section.testimonials{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+section.testimonials .container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.testimonial-description{
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .grid-container h2{
+        text-wrap: none;
+        word-wrap: nowrap;
+    }
+    section.testimonials ul.container {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navigation({ path, title }) {
+function Navigation() {
   const paths = [
     { url: "/", name: "Home" },
     { url: "/About", name: "About" },
@@ -12,15 +12,15 @@ function Navigation({ path, title }) {
 
   return (
     <nav>
-      <ul>
+      <menu className="container">
         {paths.map((element) => (
           <li className="nav-item" key={element.url}>
-            <a className="nav-link active" href={element.url}>
+            <a className="nav-link" href={element.url}>
               {element.name}
             </a>
           </li>
         ))}
-      </ul>
+      </menu>
     </nav>
   );
 }

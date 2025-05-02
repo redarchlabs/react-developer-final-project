@@ -2,14 +2,18 @@
 import React from 'react';
 import Logo from "../images/Logo.svg";
 import Navigation from './Navigation';
+import "../styles/Header.css"; // Import CSS for styling
+
 function Header() {
   return (
-    <span className="header">
-          <div>
-              <a href="#"><img src={Logo} height="60px" width="auto" alt="Red Arch Workflow" /></a>
-          </div>
-          <Navigation/>
+    <>
+    <span className="container">
+        <logo><img src={Logo} height="60px" width="auto" alt="Little Lemon" /></logo>
+        <Navigation/>
+          
    </span>
+   
+   </>
   );
 }
 

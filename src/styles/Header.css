@@ -1,0 +1,44 @@
+
+header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+header img{
+  width: 120px;
+  height: auto;
+}
+
+header .container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    justify-items: center;
+}
+
+
+header .nav-item{
+  display: flex;
+  padding: 1px;
+  border-radius: 1px;
+  text-transform: uppercase;
+  font-size:small;
+  font-weight: bold;
+}
+
+header .nav-item a{
+  text-decoration: none;  
+  color: inherit;        
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+}
+}
+

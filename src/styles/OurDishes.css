@@ -1,0 +1,50 @@
+section.dishes{
+    width:100%;
+}
+
+section.dishes .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto;      /* 2 rows */
+    align-items: center;             /* Vertically center the content */
+    justify-items: center;           /* Horizontally center the content */
+    padding-top: 10px;
+    position: relative;              
+    border-radius: 20px;             /* Optional: rounded corners on the entire grid */
+}
+
+
+section.dishes .grid-container button{
+    justify-self: end;
+    margin-left:30px;
+
+}
+
+
+section.dishes{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+section.dishes .container {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container h2{
+        text-wrap: none;
+        word-wrap: nowrap;
+    }
+    section.dishes ul.container {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+}

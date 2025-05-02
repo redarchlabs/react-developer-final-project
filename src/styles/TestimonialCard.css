@@ -1,0 +1,79 @@
+
+.testimonial-card {
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;  /* Adjust width as needed */
+    overflow: hidden;  /* Ensures the rounded corners */
+    max-height: 450px;
+    background-color: #FBDABB;
+    justify-content: center;       /* Vertically center the items */
+    min-height:150px;
+  }
+  
+  .testimonial-header{
+    font-size: medium;
+    margin-bottom:10px;
+  }
+
+  .testimonial-card img {
+    width: 50px;
+    object-fit: cover;  /* Ensures the image fills the space without distorting */
+    border-bottom: 2px solid #ddd;  /* Optional: Adds a line separating the image and text */
+  }
+
+  .testimonial-info {
+    padding: 16px;
+    max-height: 400px;          /* Maximum height of the div */
+  }
+  
+  .testimonial-name {
+    font-weight: normal;
+    margin: 10px;
+    font-size: x-small;
+  }
+  
+  .testimonial-price {
+    color: #FF6F00;  /* Similar to orange color in the image */
+    margin: 8px 0;
+  }
+  
+  .testimonial-description {
+    font-size: 0.7rem;
+    color: #555;
+    margin: 0 0 16px;
+    height: 100%;               /* Takes up the entire height of the container */
+    overflow: hidden;           /* Hides the overflowing text */
+    text-wrap: normal;         /* Allows the text to wrap */
+    text-overflow: ellipsis;    /* Adds ellipsis when text overflows */
+  }
+
+  
+.testimonials .nav-item{
+    display: flex;
+    padding: 1px;
+    border-radius: 1px;
+    font-size:small;
+  }
+  
+.testimonials .nav-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.delivery-image{
+    height:10px;
+    width:10px;
+    margin-left:10px;
+}
+
+
+.rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #FBDABB;
+  justify-content: center;
+}

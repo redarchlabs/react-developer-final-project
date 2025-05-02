@@ -1,0 +1,67 @@
+section.hero {
+    background: #495E57;
+    width: 100%;
+    padding: 10px;
+}
+
+section.hero .restaurant-image {
+    width: 200px;                    /* Limit the width to 200px */
+    height: 200px;                   /* Set the height to 200px to make it a square */
+    object-fit: cover;               /* Scale the image to cover the 200px area */
+    border-radius: 15px;             /* Round the corners */
+    position:relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow to create the floating effect */
+}
+
+section.hero .text-section {
+    z-index: 1;                      /* Ensure the text appears above the background */
+    justify-self: end;  
+}
+  
+
+section.hero .image-section {
+    position: relative;
+    justify-self: start;
+    padding-left:120px;
+    z-index: 1;                      /* Ensure the image appears above the background */
+}
+
+section.hero .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* 2 equal columns */
+    grid-template-rows: auto auto;      /* 2 rows */
+    gap: 20px;                       /* Space between the columns */
+    align-items: center;             /* Vertically center the content */
+    justify-items: center;           /* Horizontally center the content */
+    padding-top: 40px;
+    position: relative;              /* To allow positioning over the background */
+    border-radius: 20px;             /* Optional: rounded corners on the entire grid */
+
+  }
+
+  section.hero .grid-container div{
+    max-width: 300px;
+  }
+
+
+@media (max-width: 768px) {
+    section.hero .grid-container {
+    grid-template-columns: 1fr;
+    margin:0px;
+  }
+  section.hero .restaurant-image {
+    width: 200px !important;
+    height: 200px !important;
+    }
+    section.hero .retaurant-description{
+    width:auto;
+  }
+  section.hero .text-section {
+    z-index: 1;                      /* Ensure the text appears above the background */
+    justify-self: center;  
+  }
+  section.hero .image-section {
+    justify-self: center;
+    padding: 0px;
+  }
+}

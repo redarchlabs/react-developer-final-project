@@ -1,0 +1,15 @@
+.btn{
+    background-color: #F4CE14;
+    padding: 5px 10px;               /* Padding around the text */
+    border-radius: 8px;       /* Purple border */
+    font-size: 12px;                  /* Font size */
+    text-align: center;               /* Center the text */
+    cursor: pointer;                 /* Change cursor on hover */
+    transition: all 0.3s ease;        /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+    background-color: #f1c40f;       /* Darker yellow on hover */
+    border-color: black; 
+    border:2px solid;           /* Darker purple on hover */
+  }
