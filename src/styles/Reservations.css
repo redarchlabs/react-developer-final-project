@@ -1,0 +1,91 @@
+section.reservations{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+section.reservations .results-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;             /* Vertically center the content */
+    justify-items: center;           /* Horizontally center the content */
+    padding-top: 10px;
+    position: relative;              
+    border-radius: 20px;             /* Optional: rounded corners on the entire grid */
+}
+
+
+section.reservations .main-container{
+    display:flex;
+    flex-direction: row;
+    align-items: top;
+    justify-items: center;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;;
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-right: 20px;;
+  }
+  
+  .search-box h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .search-box label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .search-box select,
+  .search-box input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-box .search-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6F00;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-box .search-btn:hover {
+    background-color: #FF8C00;
+  }
+
+.table-card{
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    section.reservations .main-container{
+        flex-direction: column;
+    }
+
+    section.reservations .results-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+}

@@ -1,4 +1,4 @@
-.dish-card {
+.table-card {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -8,35 +8,39 @@
     overflow: hidden;  /* Ensures the rounded corners */
     margin: 16px;  /* Adds space between cards */
     max-height: 450px;
-    
   }
   
-  .dish-image {
+  .table-image {
     width: 100%;
     height: 200px;
     object-fit: cover;  /* Ensures the image fills the space without distorting */
     border-bottom: 2px solid #ddd;  /* Optional: Adds a line separating the image and text */
   }
 
-  
-  .dish-info {
+  .table-info {
     padding: 16px;
     max-height: 400px;          /* Maximum height of the div */
   }
-  
-  .dish-name {
-    font-weight: bold;
-    margin: 0;
-    height:40px;
-    width:70%;
+
+  .table-info .container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
   }
   
-  .dish-price {
+  .table-name {
+    font-weight: bold;
+    margin: 0;
+    height:30px;
+    width:60%;
+  }
+  
+  .table-price {
     color: #FF6F00;  /* Similar to orange color in the image */
     margin: 8px 0;
   }
   
-  .dish-description {
+  .table-description {
     font-size: 0.7rem;
     color: #555;
     margin: 0 0 16px;
@@ -64,14 +68,14 @@
     background-color: #FF8C00;  /* Lighter orange on hover */
   }
 
-.dishes .nav-item{
+.tables .nav-item{
     display: flex;
     padding: 1px;
     border-radius: 1px;
     font-size:small;
   }
   
-.dishes .nav-item a{
+.tables .nav-item a{
     text-decoration: none;
     color: inherit;
 }
@@ -82,7 +86,7 @@
     margin-left:10px;
 }
 
-.dishes .description-wrapper{
+.tables .description-wrapper{
     display:block;
     height:100px;
 }

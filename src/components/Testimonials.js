@@ -22,7 +22,7 @@ function Testimonials({ path, title }) {
 
   return (
     <section className="testimonials">
-      <span class="grid-container">
+      <span className="grid-container">
         <span></span>
          <h2>Testimonials</h2>
         </span>

@@ -1,9 +1,11 @@
 import React from "react";
-import Button from "./Button"
-import "../styles/OurDishes.css"
-import DishCard from  "./DishCard"
+import Button from "./Button";
+import "../styles/OurDishes.css";
+import DishCard from  "./DishCard";
+import { useNavigate } from "react-router-dom";
 
-function OurDishes({ path, title }) {
+function OurDishes() {
+  const navigate = useNavigate();
   const dishes = [
     {
       name: "Greek Salad",
@@ -28,10 +30,10 @@ function OurDishes({ path, title }) {
 
   return (
     <section className="dishes">
-      <span class="grid-container">
+      <span className="grid-container">
         <span></span>
          <h2>This week's specials!</h2>
-          <Button label="On the menu" onClick={() => alert("Menu!")} />
+          <Button label="On the menu" onClick={() => navigate("/Menu")} />
         </span>
       <ul className="container">
         {dishes.map((element) => (

@@ -8,7 +8,7 @@ function Header() {
   return (
     <>
     <span className="container">
-        <logo><img src={Logo} height="60px" width="auto" alt="Little Lemon" /></logo>
+        <img src={Logo} height="60px" width="auto" alt="Little Lemon" />
         <Navigation/>
           
    </span>

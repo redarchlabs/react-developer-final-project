@@ -1,0 +1,60 @@
+/* ConfirmPage.css */
+
+.confirm-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.confirm-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.reservation-details {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Spacing between rows */
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; /* Stack labels and inputs */
+    gap: 0px; /* Spacing between label and input */
+    margin-bottom:10px;
+}
+
+.form-row label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-row input,
+.form-row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.button-container {
+    text-align: center;
+}
+

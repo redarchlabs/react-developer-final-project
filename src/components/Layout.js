@@ -10,18 +10,10 @@ export function Layout({
 }) {
   return (
     <>
-      <html lang="en">    
-        <head>
-          <meta charset="UTF-8"/>
-          <meta name="description" content="Our quaint restaurant offers a warm and inviting atmosphere where comfort meets flavor."/>
-          <meta name="og:title" content="Little Lemon Restaraunt"/>
-          <meta name="og:description" content="A website for reviewing menus and reserving tables."/>
-          <meta name="og:image" content={Logo}/>
-        </head>
         <header>{Header}</header>
         <main>{Main}</main>  {/* The content here will be customizable */}
         <footer>{Footer}</footer>
-      </html>
+     
     </>
   );
 }
