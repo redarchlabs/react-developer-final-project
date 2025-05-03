@@ -11,7 +11,7 @@ import ConfirmPage from "./pages/Confirm";
 import store from './store';
 import { Provider } from 'react-redux';
 import ReservationSuccess from './pages/ReservationSuccess';
-
+import BookingPage from './pages/BookingPage';
 function App() {
   return (
     <Provider store={store}>
@@ -26,6 +26,7 @@ function App() {
               <Route path="/Login" element={<Login />} />
               <Route path="/Confirm" element={<ConfirmPage />} />
               <Route path="/success" element={<ReservationSuccess />} />
+              <Route path="/Booking" element={<BookingPage />} />
             </Routes>
       </Router>
       </Provider>

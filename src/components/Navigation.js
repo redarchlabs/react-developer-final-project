@@ -5,6 +5,7 @@ function Navigation() {
     { url: "/", name: "Home" },
     { url: "/About", name: "About" },
     { url: "/Menu", name: "Menu" },
+    { url: "/Booking", name: "Booking" },
     { url: "/Reservations", name: "Reservations" },
     { url: "/Order", name: "Order Online" },
     { url: "/Login", name: "Login" },

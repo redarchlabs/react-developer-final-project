@@ -1,0 +1,13 @@
+.booking-form .container {
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;  /* Adjust width as needed */
+    overflow: hidden;  /* Ensures the rounded corners */
+    max-height: 450px;
+    justify-content: center;       /* Vertically center the items */
+    min-height:150px;
+  }
