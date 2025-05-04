@@ -4,7 +4,7 @@ import React from "react";
 
 function Button({ label, onClick }) {
   return (
-    <button onClick={onClick} className="btn">
+    <button aria-label="On Click" onClick={onClick} className="btn" type="submit">
       {label}
     </button>
   );

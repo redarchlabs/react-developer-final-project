@@ -1,8 +1,6 @@
-// Footer.js
 import React, { useState, useEffect } from 'react';
 import "../styles/TableCard.css"
-import Basket from "../images/Basket.svg"; // Example image import
-import Button from './Button';
+
 
 const seededRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -13,7 +11,7 @@ const seededRandom = function (seed) {
     };
   };
   
-  const fetchAPI = function (date) {
+const fetchAPI = function (date) {
     let result = [];
     let random = seededRandom(date.getDate());
   
@@ -28,7 +26,7 @@ const seededRandom = function (seed) {
     return result;
   };
   
-  function BookingSlot({ resDate, resTime, guests, occasion }) {
+export function BookingSlot({ resDate, resTime, guests, occasion, showSlots, selectedTime, onSelectedTime }) {
     const [availableSlots, setAvailableSlots] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -48,10 +46,11 @@ const seededRandom = function (seed) {
       }
     }, [resDate]);
   
-    // Filter available slots based on the number of guests
+  
+    // Filter available slots based on the number of guests and selected time
     const filteredSlots = availableSlots.filter((slot) => {
       const hour = parseInt(slot.split(':')[0], 10);
-      return hour >= 17 && hour <= 23; // Ensure slots are between 5 PM and 11 PM
+      return hour >= 17 && hour <= 23 && (guests <= 4 ? true : hour < 20); // Example logic to restrict based on time and guest size
     });
   
     return (
@@ -67,14 +66,20 @@ const seededRandom = function (seed) {
         {/* Error state */}
         {error && <p>{error}</p>}
   
-        {/* Display available slots */}
-        {filteredSlots.length > 0 ? (
+        {/* Display available slots with checkboxes */}
+        {showSlots && filteredSlots.length > 0 ? (
           <ul className="available-slots-list">
             {filteredSlots.map((slot, index) => (
               <li key={index} className="slot-item">
                 <div className="slot-info">
-                  <p><strong>{slot}</strong> - Available</p>
-                  <Button label="Book Now" onClick={() => alert(`Booked ${slot} for ${guests} guests`)} />
+                  <input 
+                    type="checkbox" 
+                    id={slot} 
+                    value={slot} 
+                    checked={selectedTime === slot}
+                    onChange={() => onSelectedTime(slot)}
+                  />
+                  <label htmlFor={slot}><strong>{slot}</strong> - Available</label>
                 </div>
               </li>
             ))}

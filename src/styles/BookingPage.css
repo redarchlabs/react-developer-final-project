@@ -11,3 +11,15 @@
     justify-content: center;       /* Vertically center the items */
     min-height:150px;
   }
+
+  /* Error styling for form fields */
+input.error, select.error {
+  border: 1px solid red;
+}
+
+/* Styling for error messages */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}

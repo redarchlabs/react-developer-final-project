@@ -3,7 +3,8 @@ import "../styles/Button.css";
 import React from "react";
 import Button from "./Button";
 
-function BookingForm({
+
+export function BookingForm({
     resDate,
     resTime,
     guests,
@@ -11,7 +12,8 @@ function BookingForm({
     onDateChange,
     onTimeChange,
     onGuestsChange,
-    onOccasionChange
+    onOccasionChange,
+    onSearch
   }) {
     return (
       <section className="booking-form">
@@ -23,7 +25,7 @@ function BookingForm({
             value={resDate} 
             onChange={onDateChange}
           />
-  
+    
           <label htmlFor="res-time">Choose time</label>
           <select id="res-time" value={resTime} onChange={onTimeChange}>
             <option>17:00</option>
@@ -33,7 +35,7 @@ function BookingForm({
             <option>21:00</option>
             <option>22:00</option>
           </select>
-  
+    
           <label htmlFor="guests">Number of guests</label>
           <input 
             type="number" 
@@ -43,14 +45,14 @@ function BookingForm({
             max="10" 
             onChange={onGuestsChange}
           />
-  
+    
           <label htmlFor="occasion">Occasion</label>
           <select id="occasion" value={occasion} onChange={onOccasionChange}>
             <option>Birthday</option>
             <option>Anniversary</option>
           </select>
-  
-          <Button label="Search" />
+    
+          <Button label="Search" onClick={onSearch} /> {/* The Search Button */}
         </form>
       </section>
     );
